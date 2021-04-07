@@ -14,7 +14,13 @@ h1 {
 
 body {
   background: $white;
-  overscroll-behavior-y: none;
+}
+
+@media screen and (min-width: 770px) {
+  body {
+    // No overscroll on desktop
+    overscroll-behavior-y: none;
+  }
 }
 
 .hwrapper {
