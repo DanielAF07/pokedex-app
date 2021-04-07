@@ -9,6 +9,14 @@ Dependecias: Ir al folder del proyecto y escribir el siguiente comando:
   * npm start
 
 Es todo!
+
+---
+
+Para compilar para producción:
+ 
+ * npm run build
+
+y subir la carpeta build a producción.
  
  ## Cómo funciona?
   * Presiona sobre el Pokémon que más te agrade y mira los detalles acerca de él.
