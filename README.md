@@ -4,7 +4,11 @@ Dependecias: Ir al folder del proyecto y escribir el siguiente comando:
 
   * npm install
  
- y es todo.
+ y ejecuta con el comando: 
+
+  * npm start
+
+Es todo!
  
  ## Cómo funciona?
   * Presiona sobre el Pokémon que más te agrade y mira los detalles acerca de él.
@@ -12,5 +16,7 @@ Dependecias: Ir al folder del proyecto y escribir el siguiente comando:
  
  ## Algunas imagenes:
  ![Mobile Preview](./images/mobile-preview.jpg)
- ![Mobile Preview](./images/desktop-preview.png)
+ ![Mobile Preview 2](./images/mobile-preview-2.jpg)
+ ![Desktop Preview](./images/desktop-preview.png)
+ ![Desktop Preview 2](./images/desktop-preview-2.png)
  
