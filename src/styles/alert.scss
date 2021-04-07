@@ -1,0 +1,58 @@
+@import './colors';
+
+.alert {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(150%);
+  transition: transform 0.3s ease;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  // default danger
+  background: rgb(253,213,213);
+  color: rgb(228,47,50);
+  border-left: 4px solid rgb(228,47,50);
+  border-right: 4px solid rgb(228,47,50);
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &.show {
+    transform: translateX(-50%) translateY(-0px);
+  }
+
+  &.danger {    
+    background: rgb(253,213,213);
+    color: rgb(228,47,50);
+    border-left: 4px solid rgb(228,47,50);
+    border-right: 4px solid rgb(228,47,50);
+  }
+
+  &.correct {    
+    background: rgb(197,247,226);
+    color: rgb(15,215,135);
+    border-left: 4px solid rgb(15,215,135);
+    border-right: 4px solid rgb(15,215,135);
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .alert {
+    top: 0;
+    bottom: inherit;
+    width: 350px;
+    left: auto;
+    right: 0;
+    transform: translate(110%, 25px);
+    
+    &.show {
+      transform: translate(10%, 25px);
+    }
+  
+  }
+}

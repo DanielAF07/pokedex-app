@@ -1,0 +1,152 @@
+@import "./colors";
+
+.header {
+  background: $black2;
+  $height: 40px;
+  padding: 12px;
+  position: relative;
+  z-index: 2;
+
+  .menu-btn {
+    display: none;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    datalist option {
+      text-transform: capitalize;
+    }
+  }
+
+  input[type="search"] {
+    font-family: Roboto;
+    border: 2px solid $red;
+    max-height: $height;
+    width: 250px;
+    padding: 10px 24px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  button {
+    border: none;
+    height: $height;
+    padding: 1px 12px;
+    border-top: 2px solid $red;
+    border-right: 2px solid $red;
+    border-bottom: 2px solid $red;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: $red-light;
+    cursor: pointer;
+
+    &:hover svg.search-icon {
+      transform: rotate(15deg);
+    }
+
+    svg.search-icon {
+      position: relative;
+      top: 5px;
+      width: 32px;
+      height: 32px;
+      transition: all 0.2s ease;
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .mobile-shuffle-btn {
+    display: none;
+  }
+
+  .shuffle-btn {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 24px;
+    margin: 0 auto;
+    margin-top: 12px;
+    cursor: pointer;
+    border: 2px solid $red;
+    span {
+      font-family: "Russo One";
+      font-size: 24px;
+      color: white;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    form {
+      padding-right: 80px;
+      padding-left: 32px;
+      input[type="text"] {
+        width: 50%
+      }
+    }
+
+    .menu-btn {
+      display: inherit;
+      position: absolute;
+      top: 15px;
+      right: 32px;
+      width: 32px;
+      background: transparent; 
+      border: inherit;
+      svg {
+        width: 32px;
+        height: 32px;
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .shuffle-btn {
+      display: none;
+    }
+
+    .mobile-shuffle-btn {
+      display: inline-block;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+
+      width: 65px;
+      height: 65px;
+      border: 1px solid $red;
+      border-radius: 50%;
+
+      z-index: 1;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        top: 2px;
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

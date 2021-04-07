@@ -1,0 +1,304 @@
+@import "./colors";
+
+
+.pokeball-spinner {
+  position: fixed;
+  top: calc(50% - 53px);
+  left: calc(50% - 53px);
+  z-index: 100;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 49;
+  background: transparent;
+  transition: transform 0.3s ease;
+  transform: translateY(150%);
+
+  &.show {
+    transform: translateY(0%);
+    background: rgba(0,0,0,0.7);
+  }
+  
+  &.hide {
+
+  }
+
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+
+    .back-button{
+      background: transparent;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 55;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      .back-icon {
+        position: relative;
+        top: 2px;
+        left: -2px;
+        width: 35px;
+        padding: 5px;
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    .left-side {
+      position: relative;
+
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+      min-width: max-content;
+      overflow: hidden;
+
+      
+      .pokemon__image {
+        position: relative;
+        z-index: 52;
+        max-width: 500px;
+      }
+
+      .id__layer {
+        position: absolute;
+        bottom: -40px;
+        right: -20px;
+        font-size: 120px;
+        font-weight: bold;
+        font-family: "Russo one";
+        opacity: .2;
+        color: white;
+      }
+      
+      .pokeball__layer{
+        opacity: .25;
+        width: 200px;
+        position: absolute;
+        filter: invert(1);
+        top: 15%;
+        right: -17%;
+        z-index: 51;
+      }
+
+      .square__layer {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 25px;
+        background: linear-gradient(white, rgba(255,255,255,0.2));
+        transform: rotate(345deg) translate(-20px, -50px);
+        opacity: .35;
+
+      }
+
+      @each $key, $val in $type-colors {
+        &.#{$key} {
+          background: $val
+        }
+      }      
+
+    }
+    
+    .right-side {
+      background: $white;
+      z-index: 55;
+      border-top-right-radius: 24px;
+      border-bottom-right-radius: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
+      width: 250px;
+      max-width: 50%;
+
+      .pokemon__name {
+        text-transform: capitalize;
+        margin: 24px 0;
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 1px;
+        color: $black2;
+      }
+
+      .pokemon__about {
+
+
+        .abilities {
+          text-transform: capitalize;
+        }
+        
+        h4 {
+          margin: 0;
+          padding-top: 6px;
+          padding-bottom: 6px;
+        }
+      }
+
+      .types {
+        margin: 12px 0px;
+        
+        .type {
+          text-transform: uppercase;
+          padding: 3px 24px;
+          border: 1px solid $gray-light;
+          border-radius: 4px;
+          display: inline-block;
+          margin-right: 6px;
+
+          @each $key, $value in $type-colors {
+            &.#{$key} {
+              background: linear-gradient(white 0%, $value 20%, $value 80%, white 100%)
+              // background: $value;
+            }
+          }
+        
+        }
+
+      }
+      
+      .ability {
+        text-transform: capitalize;
+      }
+
+      .pokemon__stats {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+
+        p {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .stat{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid gray;
+          padding: 3px 0px;
+          position: relative;
+          
+          &:last-of-type {
+            border-bottom: none;
+          }
+          .stat__name {
+            font-weight: normal;
+            text-transform: capitalize;
+            font-size: 13px;
+          }
+
+          .stat__value {
+            font-size: 12px;
+            z-index: 59;
+          }
+
+          .bar {
+            position: absolute;
+            height: 6px;
+            right: 24px;
+            width: calc(100% - 76px);
+          }
+
+          .stat__bar {
+            position: absolute;
+            border-radius: 3px;
+            height: 6px;
+            @each $key, $val in $type-colors {
+              &.#{$key} {
+                background: $val;
+              }
+            }
+          }
+          }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 100vw;
+    height: 100vh;
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+
+      .back-button {
+        width: 50px;
+        height: 50px;
+        background: rgba(255,255,255,0.6);
+        background: transparent;
+        .back-icon {
+          left: -4px;
+          width: 40px;
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      .left-side {
+        border-radius: 0px;
+        width: 100%;
+        height: 320px;
+        text-align: center;
+        position: relative;
+
+        .id__layer {
+          font-size: 80px;
+          right: 0px;
+          bottom: 0px;
+        }
+
+        .pokeball__layer {
+          top: -30px;
+          right: -30px;
+          width: 130px;
+        }
+
+        .pokemon__image {
+          height: 100%;
+          z-index: 70;
+          position: absolute;
+          bottom: -9px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .right-side {
+        width: calc(100% - 48px);
+        max-width: inherit;
+        height: 100%;
+        margin-top: -20px;
+        border-radius: 0px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        .types {
+          text-align: center;
+        }
+
+        .pokemon__stats{   
+          width: calc(100% - 12px);;
+        }
+      }
+    }
+  }
+}

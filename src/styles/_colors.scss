@@ -1,0 +1,66 @@
+/* https://coolors.co/0b090a-161a1d-660708-a4161a-ba181b-e5383b-b1a7a6-d3d3d3-f5f3f4-ffffff */
+
+$black: #0b090a;
+$black2: #161a1d;
+$white: #f5f3f4;
+$gray-light: #D3D3D3;
+$gray: #B1A7A6;
+
+$red: #BA181B;
+$red-darken1: #A4161A;
+$red-darken2: #660708;
+$red-light: #E5383B;
+
+$gray-blue: #CFCFEA;
+
+$color-water: rgb(118,189,254);
+$color-grass: rgb(72,208,176);
+$color-fire: rgb(251,108,108);
+$color-electric: rgb(255,216,111);
+$color-normal: rgb(174,176,163);
+$color-fighting: rgb(176,87,71);
+$color-flying: rgb(90,111,205);
+$color-poison: rgb(163,89,148);
+$color-ground: rgb(219,183,97);
+$color-rock: rgb(150,128,58);
+$color-bug: rgb(173,191,69);
+$color-ghost: rgb(88,88,165);
+$color-psychic: rgb(235,91,161);
+$color-ice: rgb(128,222,250);
+$color-dragon: rgb(129,111,235);
+$color-dark: rgb(133,95,82);
+$color-steel: rgb(179,178,196);
+$color-fairy: rgb(230,160,230);
+$color-food: rgb(200,176,112);
+$color-slug: rgb(102,192,120);
+$color-plastic: rgb(145,143,190);
+$color-wind: rgb(216,175,109);
+$color-crystal: rgb(101,183,195);
+$color-light: rgb(218, 219, 37);
+
+$type-colors: (
+  ground: $color-ground,
+  rock: $color-rock,
+  ghost: $color-ghost,
+  psychic: $color-psychic,
+  ice: $color-ice,
+  dragon: $color-dragon,
+  dark: $color-dark,
+  steel: $color-steel,
+  fairy: $color-fairy,
+  food: $color-food,
+  slug: $color-slug,
+  plastic: $color-plastic,
+  wind: $color-wind,
+  crystal: $color-crystal,
+  light: $color-light,
+  normal: $color-normal,
+  fighting: $color-fighting,
+  bug: $color-bug,
+  flying: $color-flying,
+  poison: $color-poison,
+  water: $color-water,
+  grass: $color-grass,
+  fire: $color-fire,
+  electric: $color-electric,
+);

@@ -1,0 +1,61 @@
+@import "./base";
+@import "./colors";
+
+.container {
+  position: relative;
+  padding-bottom: 160px;
+  text-align: center;
+
+  .intersection {
+    position: absolute;
+  }
+
+  .pokemon-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 32px 0;
+  }
+  
+  .loadMore {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $white;
+    background: $black2;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  .pokeball-spinner {
+    text-align: left;
+    position: absolute;
+    bottom: -25px;
+    top: auto;
+  }
+
+}
+
+@media screen and (max-width: 759px) {
+  .container {
+    .pokemon-box {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .loadMore {
+      text-align: center;
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+      transform: translate(0,0)
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import './colors';
+
+* {
+  font-family: Roboto;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Russo One"
+}
+
+body {
+  background: $white;
+  overscroll-behavior-y: none;
+}
+
+.hwrapper {
+  max-inline-size: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
