@@ -10,6 +10,8 @@ Dependecias: Ir al folder del proyecto y escribir el siguiente comando:
 
 Es todo!
 
+---
+
 Para compilar para producción:
  
  * npm run build
