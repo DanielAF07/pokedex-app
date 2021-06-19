@@ -1,4 +1,4 @@
-FROM node:current-alpine3.11
+FROM node:lts-alpine3.13
 
 RUN mkdir -p /usr/src
 WORKDIR /usr/src
