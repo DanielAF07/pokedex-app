@@ -11,10 +11,12 @@
   }
 
   .pokemon-box {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
     justify-content: space-between;
-    margin: 32px 0;
+    row-gap: 1.5em;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   
   .loadMore {
@@ -42,6 +44,8 @@
 @media screen and (max-width: 759px) {
   .container {
     .pokemon-box {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
     }
   }

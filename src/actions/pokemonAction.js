@@ -35,7 +35,7 @@ export function loadPokemonsAction() {
       let response = {}
       //If it is the first loading
       if (nextPage === "") {
-        response = await clienteAxios.get("pokemon?limit=25");
+        response = await clienteAxios.get("pokemon?limit=50");
       } else {
         response = await clienteAxios.get(nextPage);
         // Take pokemon ID on URL and put it in pokemon object

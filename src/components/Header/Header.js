@@ -64,7 +64,7 @@ const Header = () => {
             list="pokemonNames"
           />
           <button type="submit">
-            <SearchIcon className="search-icon" disable={form.search.length > 0 ? true : false}/>
+            <SearchIcon className="search-icon" />
           </button>
           <datalist id="pokemonNames">
             {pokemonNames.map( (name,i) => <option key={i}>{name}</option>)}

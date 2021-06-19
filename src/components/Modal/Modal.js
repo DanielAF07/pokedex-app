@@ -8,6 +8,7 @@ import { showModalAction } from "../../actions/modalAction";
 import { pokemonLoadedAction } from "../../actions/pokemonAction";
 
 import "../../styles/modal.scss";
+
 const Modal = () => {
   const dispatch = useDispatch();
 
@@ -56,6 +57,11 @@ const Modal = () => {
       width: `${width}%`,
     };
   };
+
+  const getID = (id, offset = 0)  => {
+    id = id + offset
+    return ("000" + id).slice(-3);
+  }
 
   return (
     <>
@@ -119,6 +125,12 @@ const Modal = () => {
               })}
             </div>
           </div>
+        </div>
+        <div>
+          {/* <div className="nav-pokemon">
+            <a href="#!" className="previousPokemon"><img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${getID(pokemon.id, -1)}.png`} alt=""/></a>
+            <a href="#!" className="nextPokemon"><img src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${getID(pokemon.id, 1)}.png`} alt=""/></a>
+          </div> */}
         </div>
       </div>
     </>

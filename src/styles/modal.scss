@@ -72,6 +72,8 @@
         position: relative;
         z-index: 52;
         max-width: 500px;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
       }
 
       .id__layer {
@@ -85,7 +87,7 @@
         color: white;
       }
       
-      .pokeball__layer{
+      .pokeball__layer {
         opacity: .25;
         width: 200px;
         position: absolute;
@@ -274,6 +276,7 @@
         }
 
         .pokemon__image {
+          filter: none;
           height: 100%;
           z-index: 70;
           position: absolute;
@@ -296,7 +299,7 @@
         }
 
         .pokemon__stats{   
-          width: calc(100% - 12px);;
+          width: calc(100% - 12px);
         }
       }
     }

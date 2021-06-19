@@ -8,6 +8,7 @@ import {
   activateIntersectorAction,
 } from "../../actions/pokemonAction";
 import Spinner from "../misc/Spinner";
+
 const PokemonBox = () => {
   const dispatch = useDispatch();
 
